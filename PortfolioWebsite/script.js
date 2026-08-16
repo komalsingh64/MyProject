@@ -1,19 +1,21 @@
-body{
-    background-color: #111827;
-    color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 40px;
-}
+const texts = [
+    "💻 Computer Science Student",
+    "🚀 Aspiring Software Developer",
+    "☕ Java Learner",
+    "🎯 Future Software Engineer"
+];
 
-h1{
-    color: #60a5fa;
-}
+let count = 0;
+const textElement = document.getElementById("typing-text");
 
-h2{
-    color: #fbbf24;
-}
+setInterval(() => {
 
-ul{
-    list-style: none;
-}
+    textElement.classList.add("fade");
+
+    setTimeout(() => {
+        count = (count + 1) % texts.length;
+        textElement.innerText = texts[count];
+        textElement.classList.remove("fade");
+    }, 500);
+
+}, 2500);
