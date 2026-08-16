@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster Pro • Workspace</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+<div class="app-wrapper">
+    <!-- Header -->
+    <header class="header">
+        <div>
+            <div class="badge-tag"><i class="fa-solid fa-sparkles"></i> Daily Workspace</div>
+            <h1>TaskMaster<span class="dot">.</span></h1>
+            <p id="dateDisplay" class="date-text"></p>
+        </div>
+        <div class="progress-ring-card">
+            <span class="progress-percent" id="statsPercent">0%</span>
+            <span class="progress-label">Completed</span>
+        </div>
+    </header>
+
+    <!-- Progress Tracker -->
+    <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progressBar"></div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="searchInput" placeholder="Quick search tasks..." oninput="handleSearch()">
+    </div>
+
+    <!-- Main Input Box -->
+    <form id="todoForm" class="create-box">
+        <input type="text" id="taskInput" placeholder="Add a new task..." autocomplete="off" required>
+        
+        <div class="create-actions">
+            <div class="select-wrapper">
+                <i class="fa-solid fa-tag"></i>
+                <select id="categoryInput">
+                    <option value="Work">Work</option>
+                    <option value="Study">Study</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Finance">Finance</option>
+                </select>
+            </div>
+
+            <div class="select-wrapper">
+                <i class="fa-solid fa-flag"></i>
+                <select id="priorityInput">
+                    <option value="medium">Medium</option>
+                    <option value="high">High Priority</option>
+                    <option value="low">Low Priority</option>
+                </select>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                <i class="fa-solid fa-plus"></i> Add Task
+            </button>
+        </div>
+    </form>
+
+    <!-- Filter Tabs -->
+    <div class="tabs-nav">
+        <button class="tab-btn active" onclick="setFilter('all')">
+            <i class="fa-solid fa-list-check"></i> All
+        </button>
+        <button class="tab-btn" onclick="setFilter('active')">
+            <i class="fa-regular fa-clock"></i> In Progress
+        </button>
+        <button class="tab-btn" onclick="setFilter('completed')">
+            <i class="fa-regular fa-circle-check"></i> Done
+        </button>
+    </div>
+
+    <!-- Tasks List Container -->
+    <div class="list-wrapper">
+        <ul id="taskList" class="task-list"></ul>
+    </div>
+
+    <!-- Footer Stats -->
+    <footer class="footer">
+        <span id="pendingCount" class="pending-text">0 tasks remaining</span>
+        <button class="clear-btn" onclick="clearCompleted()">
+            <i class="fa-regular fa-trash-can"></i> Clear Completed
+        </button>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
