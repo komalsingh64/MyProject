@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Komal Singh Portfolio</title>
-
     <link rel="stylesheet" href="style.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -18,252 +18,230 @@
     <a href="#contact">Contact</a>
 </nav>
 
-    <div class="container">
+<div class="container">
 
-<div class="hero">
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-text">
+            <h3>👋 Hello, I'm</h3>
+            <h1>Komal Singh</h1>
+            <h2 id="typing-text">🎓 B.Tech CSE (AI & ML)</h2>
 
-<div class="hero-text">
+            <div class="hero-badges">
+                <span>AI & ML</span>
+                <span>Web Development</span>
+                <span>Java</span>
+                <span>Hackathon Participant</span>
+            </div>
+            
+            <div class="hero-status">
+                <span>🚀 Open to Learning & Building Projects</span>
+            </div>
 
-<h3>👋 Hello, I'm</h3>
+            <p>
+                Passionate about software development, problem-solving, Artificial Intelligence, Machine Learning, and building impactful real-world projects.
+            </p>
 
-<h1>Komal Singh</h1>
+            <div class="hero-cta">
+                <a href="https://github.com/komalsingh64" target="_blank">
+                    <button class="primary-btn"><i class="fa-brands fa-github"></i> Visit My GitHub</button>
+                </a>
+                <a href="#projects">
+                    <button class="secondary-btn">View My Projects 🚀</button>
+                </a>
+            </div>
+        </div>
 
-<h2 id="typing-text">🎓 B.Tech CSE (AI & ML)</h2>
+        <div class="hero-image">
+            <img src="profile.jpg.png" alt="Komal Singh" class="profile-pic">
+        </div>
+    </div>
 
-<div class="hero-badges">
-    <span>AI & ML</span>
-    <span>Web Development</span>
-    <span>Java</span>
-    <span>Hackathon Participant</span>
-</div>
- <div class="hero-status">
-    <span>🚀 Open to Learning & Building Projects</span>
-</div>
+    <!-- Highlights -->
+    <div class="highlights">
+        <div class="highlight-card">
+            <i class="fa-solid fa-laptop-code"></i>
+            <h3>Web Development</h3>
+            <p>Building responsive and modern websites using HTML, CSS and JavaScript.</p>
+        </div>
 
-<p>
-Passionate about software development, problem-solving, Artificial Intelligence, Machine Learning, and building impactful real-world projects.
-</p>
+        <div class="highlight-card">
+            <i class="fa-solid fa-brain"></i>
+            <h3>AI & ML</h3>
+            <p>Learning Artificial Intelligence and Machine Learning to build innovative solutions.</p>
+        </div>
 
+        <div class="highlight-card">
+            <i class="fa-solid fa-code"></i>
+            <h3>Java Programming</h3>
+            <p>Improving problem-solving skills through Java and Data Structures & Algorithms.</p>
+        </div>
+    </div>
 
-</div>
+    <!-- About Me -->
+    <h2 id="about" class="section-heading">🙋 About Me</h2>
+    <p class="about-text">
+        I am a B.Tech student specializing in Artificial Intelligence and Machine Learning (AI & ML). Passionate about software development, problem-solving, and building real-world projects. Currently learning Java, Web Development, Data Structures & Algorithms, and exploring AI technologies to create innovative solutions.
+    </p>
 
-<div class="hero-image">
+    <!-- Skills -->
+    <h2 id="skills" class="section-heading">My Skills 💻</h2>
+    <div class="skills-category">
+        <h3>Programming Languages</h3>
+        <div class="skills">
+            <span><i class="fa-brands fa-java"></i> Java</span>
+            <span><i class="fa-brands fa-python"></i> Python</span>
+            <span><i class="fa-solid fa-code"></i> C++</span>
+        </div>
 
-<img src="profile.jpg.png" alt="Komal Singh" class="profile-pic">
-
-</div>
-
-</div>
-
-
-        <a href="https://github.com/komalsingh64" target="_blank">
-    <button>Visit My GitHub 🚀</button>
-</a>
-
-<a href="#projects">
-    <button>View My Projects 🚀</button>
-</a>
-
-<div class="highlights">
-
-    <div class="highlight-card">
-        <i class="fa-solid fa-laptop-code"></i>
         <h3>Web Development</h3>
-        <p>Building responsive and modern websites using HTML, CSS and JavaScript.</p>
+        <div class="skills">
+            <span><i class="fa-brands fa-html5"></i> HTML</span>
+            <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+            <span><i class="fa-brands fa-js"></i> JavaScript</span>
+        </div>
+
+        <h3>Tools & Platforms</h3>
+        <div class="skills">
+            <span><i class="fa-brands fa-git-alt"></i> Git</span>
+            <span><i class="fa-brands fa-github"></i> GitHub</span>
+        </div>
     </div>
 
-    <div class="highlight-card">
-        <i class="fa-solid fa-brain"></i>
-        <h3>AI & ML</h3>
-        <p>Learning Artificial Intelligence and Machine Learning to build innovative solutions.</p>
+    <!-- Goals -->
+    <h2 id="goals" class="section-heading">🎯 My Goals</h2>
+    <div class="goals">
+        <p>✅ Become a Skilled Software Developer</p>
+        <p>✅ Build Real-World Projects</p>
+        <p>✅ Master Data Structures & Algorithms</p>
+        <p>✅ Contribute to Open Source Projects</p>
     </div>
 
-    <div class="highlight-card">
-        <i class="fa-solid fa-code"></i>
-        <h3>Java Programming</h3>
-        <p>Improving problem-solving skills through Java and Data Structures & Algorithms.</p>
+    <!-- Projects Section -->
+    <h2 id="projects" class="section-heading">My Projects 🚀</h2>
+    <div class="projects-container">
+
+        <!-- 1. NutriScan AI -->
+        <div class="project">
+            <img src="NutriScan.jpg.png" class="project-image" alt="NutriScan AI">
+            <div class="project-tag">Hackathon Project • Mobile App</div>
+            <h3>🥗 NutriScan AI</h3>
+            <p>
+                An AI-powered Flutter mobile application that helps users analyze food products by scanning barcodes or food images with instant nutritional and allergen insights.
+            </p>
+            <div class="tech-stack">
+                <span>Flutter</span>
+                <span>ML Kit</span>
+                <span>OpenFoodFacts</span>
+            </div>
+            <div class="project-buttons">
+                <a href="https://komalsingh64.github.io/NutriScan/" target="_blank">
+                    <button><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</button>
+                </a>
+                <a href="https://github.com/komalsingh64/NutriScan" target="_blank">
+                    <button><i class="fa-brands fa-github"></i> GitHub</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- 2. Smart FX Calculator -->
+        <div class="project">
+            <img src="Calculator.jpg.png" class="project-image" alt="Smart FX Calculator">
+            <div class="project-tag">Personal Project • Web App</div>
+            <h3>⚡ Smart FX Calculator</h3>
+            <p>
+                An interactive smartphone-styled calculator featuring Standard Math, Advanced Scientific FX operations, USD ⇄ INR Currency Converter, and Haptic Web Audio.
+            </p>
+            <div class="tech-stack">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>Web Audio API</span>
+            </div>
+            <div class="project-buttons">
+                <a href="https://komalsingh64.github.io/MyProject/CalculatorApp/" target="_blank">
+                    <button><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</button>
+                </a>
+                <a href="https://github.com/komalsingh64/CalculatorApp" target="_blank">
+                    <button><i class="fa-brands fa-github"></i> GitHub</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- 3. TaskMaster Pro -->
+        <div class="project">
+            <img src="TodoApp.jpg.png" class="project-image" alt="TaskMaster Pro">
+            <div class="project-tag">Web App • Productivity</div>
+            <h3>📋 TaskMaster Pro</h3>
+            <p>
+                A productivity workspace with LocalStorage persistence, category filters, interactive progress ring tracking, confetti animations, and sound feedback.
+            </p>
+            <div class="tech-stack">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>LocalStorage API</span>
+            </div>
+            <div class="project-buttons">
+                <a href="https://komalsingh64.github.io/TodoApp/" target="_blank">
+                    <button><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</button>
+                </a>
+                <a href="https://github.com/komalsingh64/TodoApp" target="_blank">
+                    <button><i class="fa-brands fa-github"></i> GitHub</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- 4. Portfolio Website -->
+        <div class="project">
+            <img src="profile.jpg.png" class="project-image" alt="Portfolio Website">
+            <div class="project-tag">Personal Portfolio</div>
+            <h3>🌐 Portfolio Website</h3>
+            <p>
+                A personal portfolio website built using HTML and CSS to showcase skills, interactive web apps, and live deployments on GitHub Pages.
+            </p>
+            <div class="tech-stack">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>GitHub Pages</span>
+            </div>
+            <div class="project-buttons">
+                <a href="https://github.com/komalsingh64/PortfolioWebsite" target="_blank" style="width: 100%;">
+                    <button><i class="fa-brands fa-github"></i> View Source Code</button>
+                </a>
+            </div>
+        </div>
+
+    </div> <!-- End of projects-container -->
+
+    <!-- Contact Box -->
+    <div class="contact-box" id="contact">
+        <h2>Let's Connect & Collaborate 🚀</h2>
+        <p>
+            I'm always open to discussing new projects, learning opportunities, and collaborations in AI, Machine Learning, Web Development, and Software Engineering.
+        </p>
+
+        <div class="social-links">
+            <a href="mailto:komalsingh124jsr@gmail.com" target="_blank" title="Email">
+                <img src="https://img.icons8.com/fluency/48/gmail-new.png" class="social-icon" alt="Email">
+            </a>
+            <a href="https://github.com/komalsingh64" target="_blank" title="GitHub">
+                <img src="https://img.icons8.com/ios-glyphs/90/github.png" class="social-icon" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/komal-singh-94a67a343/" target="_blank" title="LinkedIn">
+                <img src="https://img.icons8.com/color/96/linkedin.png" class="social-icon" alt="LinkedIn">
+            </a>
+        </div>
     </div>
 
-</div>
-
-<h2 id="about">🙋 About Me</h2>
-
-<p>
-I am a B.Tech student specializing in Artificial Intelligence and Machine Learning (AI & ML). Passionate about software development, problem-solving, and building real-world projects. Currently learning Java, Web Development, Data Structures & Algorithms, and exploring AI technologies to create innovative solutions.
-</p>
-<h2 id="skills">My Skills 💻</h2>
-
-<div class="skills-category">
-
-    <h3>Programming Languages</h3>
-
-    <div class="skills">
-
-        <span><i class="fa-brands fa-java"></i> Java</span>
-
-        <span><i class="fa-brands fa-python"></i> Python</span>
-
-        <span><i class="fa-solid fa-code"></i> C++</span>
-
-    </div>
-
-    <h3>Web Development</h3>
-
-    <div class="skills">
-
-        <span><i class="fa-brands fa-html5"></i> HTML</span>
-
-        <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
-
-        <span><i class="fa-brands fa-js"></i> JavaScript</span>
-
-    </div>
-
-    <h3>Tools & Platforms</h3>
-
-    <div class="skills">
-
-        <span><i class="fa-brands fa-git-alt"></i> Git</span>
-
-        <span><i class="fa-brands fa-github"></i> GitHub</span>
-
-    </div>
-
-</div>
-<h2 id="goals">🎯 My Goals</h2>
-
-<div class="goals">
-    <p>✅ Become a Skilled Software Developer</p>
-    <p>✅ Build Real-World Projects</p>
-    <p>✅ Master Data Structures & Algorithms</p>
-    <p>✅ Contribute to Open Source Projects</p>
-</div>
-
-<h2 id="projects">My Projects 🚀</h2>
-
-<div class="projects-container">
-
-<div class="project">
-
-    <img src="NutriScan.jpg.png" class="project-image" alt="NutriScan AI">
-
-    <div class="project-tag">Hackathon Project</div>
-
-    <h3>🥗 NutriScan AI</h3>
-
-    <p>
-        An AI-powered Flutter mobile application that helps users analyze food products by scanning barcodes or food images. It provides nutrition information, allergens, health scores, and AI-powered insights.
-    </p>
-
-    <div class="tech-stack">
-        <span>Flutter</span>
-        <span>ML Kit</span>
-        <span>OpenFoodFacts</span>
-    </div>
-
-    <div class="project-buttons">
-
-    <a href="https://komalsingh64.github.io/NutriScan/" target="_blank">
-    <button>
-        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-        Live Demo
-    </button>
-</a>
-
-    <a href="https://github.com/komalsingh64/NutriScan" target="_blank">
-    <button>
-        <i class="fa-brands fa-github"></i>
-        GitHub
-    </button>
-</a>
-</div>
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Komal Singh | Built with ❤️ using HTML & CSS</p>
+    </footer>
 
 </div>
 
-
-<div class="project">
-
-    <div class="project-tag">Personal Portfolio</div>
-    <h3>🌐 Portfolio Website</h3>
-
-    <p>
-        A personal portfolio website built using HTML and CSS to showcase my skills and projects.
-    </p>
-
-    <a href="https://github.com/komalsingh64" target="_blank">
-        <button>🔗 View Source Code</button>
-    </a>
-
-</div>
-
-<div class="project">
-
-    <img src="Calculator.jpg.png" class="project-image" alt="Smart FX Calculator">
-
-    <div class="project-tag">Personal Project • Web App</div>
-    <h3>⚡ Smart FX Calculator & Converter</h3>
-
-    <p>
-        An interactive smartphone-styled calculator featuring Standard Math, Advanced Scientific (FX) functions, Real-time USD ⇄ INR Currency Converter, calculation history, and Haptic Web Audio click feedback.
-    </p>
-
-    <div class="tech-stack">
-        <span>HTML5</span>
-        <span>CSS3 Grid</span>
-        <span>JavaScript (ES6+)</span>
-        <span>Web Audio API</span>
-    </div>
-
-    <div class="project-buttons">
-        <a href="https://komalsingh64.github.io/MyProject/CalculatorApp/" target="_blank">
-    <button>
-        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-        Live Demo
-    </button>
-</a>
-
-        <a href="https://github.com/komalsingh64/CalculatorApp" target="_blank">
-            <button>
-                <i class="fa-brands fa-github"></i>
-                GitHub
-            </button>
-        </a>
-    </div>
-
-</div>
-
-<div class="project">
-    <h3>✅ To-Do List App</h3>
-    <p>A future project to manage daily tasks efficiently.</p>
-</div>
-</div>
-</div>
-<div class="contact-box">
-
-    <h2 id="contact">Let's Connect & Collaborate 🚀</h2>
-
-    <p>
-        I'm always open to discussing new projects, learning opportunities, and collaborations in AI, Machine Learning, Web Development, and Software Engineering.
-    </p>
-
-    <a href="mailto:komalsingh124jsr@gmail.com" target="_blank">
-        <img src="https://img.icons8.com/fluency/48/gmail-new.png" class="social-icon">
-    </a>
-
-    <a href="https://github.com/komalsingh64" target="_blank">
-        <img src="https://img.icons8.com/ios-glyphs/90/github.png" class="social-icon">
-    </a>
-
-    <a href="https://www.linkedin.com/in/komal-singh-94a67a343/" target="_blank">
-    <img src="https://img.icons8.com/color/96/linkedin.png" class="social-icon">
-</a>
-
-</div>
-<footer>
-    <p>© 2026 Komal Singh | Built with ❤️ using HTML & CSS</p>
-</footer>
-
-</div>
 <script src="script.js"></script>
 </body>
 </html>
