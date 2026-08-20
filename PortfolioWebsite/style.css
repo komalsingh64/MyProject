@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Navbar ke peeche heading na chupe */
+}
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 * {
@@ -7,13 +11,18 @@
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
 body {
     background-color: #0b0f19;
     color: #f1f5f9;
     line-height: 1.6;
 }
 
-/* Navbar */
+/* Navbar with Active Underline */
 nav {
     position: sticky;
     top: 0;
@@ -21,22 +30,47 @@ nav {
     backdrop-filter: blur(12px);
     display: flex;
     justify-content: center;
-    gap: 24px;
+    gap: 28px;
     padding: 16px 20px;
     z-index: 100;
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-nav a {
+.nav-link {
+    position: relative;
     color: #94a3b8;
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
-    transition: color 0.2s;
+    padding-bottom: 6px;
+    transition: color 0.25s ease;
 }
 
-nav a:hover {
-    color: #6366f1;
+.nav-link:hover {
+    color: #ffffff;
+}
+
+/* Glowing underline line below current section */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2.5px;
+    background: linear-gradient(90deg, #6366f1, #38bdf8);
+    border-radius: 4px;
+    transition: width 0.3s ease, left 0.3s ease;
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.6);
+}
+
+.nav-link.active {
+    color: #ffffff;
+}
+
+.nav-link.active::after {
+    width: 100%;
+    left: 0;
 }
 
 /* Container */
@@ -46,13 +80,18 @@ nav a:hover {
     padding: 40px 20px 60px 20px;
 }
 
+.section-block {
+    padding-top: 20px;
+    margin-bottom: 50px;
+}
+
 /* Hero Section */
 .hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 .hero-text {
@@ -74,17 +113,55 @@ nav a:hover {
     -webkit-text-fill-color: transparent;
 }
 
-.hero-text h2 {
+/* Attractive Degree Gradient */
+.degree-badge {
+    font-size: 19px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    display: inline-block;
+    background: linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 10px rgba(236, 72, 153, 0.3));
+    letter-spacing: 0.3px;
+}
+
+/* Fast Rotating Text Animation */
+.role-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 36px;
+    margin-bottom: 14px;
+}
+
+.role-icon {
     font-size: 18px;
+}
+
+.spinning-text {
+    font-size: 19px;
+    font-weight: 800;
     color: #38bdf8;
-    margin-bottom: 16px;
+    display: inline-block;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.spinning-text.fade-out {
+    opacity: 0;
+    transform: translateY(-8px);
+}
+
+.spinning-text.fade-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .hero-badges {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 }
 
 .hero-badges span {
@@ -95,18 +172,6 @@ nav a:hover {
     font-weight: 600;
     padding: 4px 10px;
     border-radius: 20px;
-}
-
-.hero-status span {
-    display: inline-block;
-    background: rgba(16, 185, 129, 0.12);
-    border: 1px solid rgba(16, 185, 129, 0.3);
-    color: #34d399;
-    font-size: 12px;
-    font-weight: 700;
-    padding: 5px 12px;
-    border-radius: 20px;
-    margin-bottom: 16px;
 }
 
 .hero-text p {
@@ -154,7 +219,7 @@ nav a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 }
 
 .highlight-card {
@@ -184,8 +249,7 @@ nav a:hover {
 .section-heading {
     font-size: 26px;
     font-weight: 800;
-    margin-top: 50px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     color: #ffffff;
 }
 
@@ -255,20 +319,17 @@ nav a:hover {
     font-weight: 500;
 }
 
-/* ========================================================
-   PROJECTS 2x2 LAPTOP GRID (CLEAN & CENTERED)
-======================================================== */
+/* Projects 2x2 Grid */
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 Cards per row on Laptop */
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
     width: 100%;
-    margin-bottom: 60px;
 }
 
 @media (max-width: 768px) {
     .projects-container {
-        grid-template-columns: 1fr; /* 1 Card per row on Mobile */
+        grid-template-columns: 1fr;
     }
 }
 
@@ -372,17 +433,13 @@ nav a:hover {
     opacity: 0.9;
 }
 
-/* ========================================================
-   CONTACT BOX & FOOTER (CENTERED AT BOTTOM)
-======================================================== */
+/* Contact Box & Footer */
 .contact-box {
     background: #131d31;
     border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: 20px;
     padding: 40px 20px;
     text-align: center;
-    margin-top: 60px;
-    margin-bottom: 40px;
 }
 
 .contact-box h2 {
@@ -423,6 +480,6 @@ footer {
     text-align: center;
     color: #64748b;
     font-size: 12px;
-    padding-top: 20px;
+    padding-top: 30px;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
